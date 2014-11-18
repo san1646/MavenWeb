@@ -34,7 +34,7 @@
 				<!-- Custom user's -->
 				<user name="cengel" password="123" authorities="ROLE_USER" />
 				<user name="mseals" password="123" authorities="ROLE_USER" />
-				<user name="ddrennen" password="123" authorities="ROLE_USER" />
+				<user name="ddrennen" password="1234" authorities="ROLE_USER" />
 			</user-service>
 		</authentication-provider>
 	</authentication-manager>
