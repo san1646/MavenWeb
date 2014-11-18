@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<sitemesh>  
+        <mapping path="/welcome" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>  
+        <mapping path="/home" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>
+        <!-- <mapping path="/login" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/> -->
+        <!-- <mapping path="/" decorator="/WEB-INF/views/decorator/root.jsp"/> -->
+        <!-- <mapping path="/*" decorator="/WEB-INF/views/decorator/root.jsp"/> -->
+       <!--  <mapping path="/project" decorator="/WEB-INF/views/decorator/root.jsp"></mapping> -->
+       <!--  <mapping path="/employee" decorator="/WEB-INF/views/decorator/root.jsp"></mapping> -->
+       <mapping path="/createProject" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>
+       <mapping path="/savedata" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>
+       <mapping path="/knightedrate" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>
+       <mapping path="/findproject" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>
+       <mapping path="/dashboard" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/>
+       <!-- <mapping path="/technology" decorator="/WEB-INF/views/decorator/homeRoot.jsp"/> -->
+</sitemesh>  

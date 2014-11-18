@@ -1,0 +1,74 @@
+.LOG
+
+5:35 PM 9/11/2013
+
+Knighted WBS addedd to the Technology tab.
+Form submission problems have been resolved. 
+The data is being received in the controller method (/technology, POST).
+Clean is required, the WBS Collapsible was muted for development work.
+
+Things to do-
+Unmute the collapsible, and make a Service Layer call from the TechnologyController to save user data in to the database.
+
+
+5:32 PM 9/12/2013
+The collapsible form is working! yay
+User data is being saved to the database.
+Ajax integration was not required. But it might be required for better UI functionality.
+
+To do-
+make the redirection after form submit to better page than "createProject" ( it loses the decorator in redirection )
+Add cookie functionality so that data and collapsible can be persisted. 
+
+
+4:57 PM 9/30/2013
+The Create Project session store is complete. After clicking on the 'Create a Project' link, new project is inserted and persisted throughout the session.
+KnightedWBS form is stored in the database. 
+
+To do-
+Ajax request to get the total hours. Get the total hours for the current project from the database.
+
+5:02 PM 10/8/2013
+Knighted WBS form is working completely. Project object is set into the session and used to store the WBS.
+
+To do-
+Ajax requests for getting total hours, validations
+
+1:55 PM 10/16/2013
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Find Project - Using search functionality, user can find existing projects. Only the project id search has been implemented.
+Future developments - Make search multi-valued and dynamic query generation. 
+
+2. Edit Project - Search query returns a project. This project can be edited using Edit. Edit will basically forward the Project
+ object to create Project module. 
+Future dev. - Populate all the tabs using given project info. and make it editable.
+
+3. CSS Links in JSP - Added the configurable use of CSS. theme-plm.properties file stores the link for CSS under 'jquerystyle' attr.
+Using MessageSource, it can be passed on to the JSP via the Controller. Only 'findProjectResult' View has been configured. Rest has 
+to be done when time permits.
+
+4. Username display - Display username on the right corner of all the screens
+
+5. List current projects on the Home screen
+
+6. DataTable integration for Home screen project grid; (Downgraded jQ version to 1.8.2)
+
+
+3:11 PM 10/18/2013
+
+7. Bug - after session timeout, the Spring security f/w takes the control to login page.
+Here, the session object was found to be null. Fixed the bug by setting create-session="always" in http in security context xml.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+1:27 PM 11/22/2013
+Lot of new stuff added!
+1. WBS form is now submitted through ajax. The flow remains on the same page.
+2. Cost page is revamped.
+3. Started using Mylyn plugin for task management in Eclipse.
+4. Project_Kwbs - This entity now has all the Project and KnightedWbs intersection. New project will spawn new inserts in to Project_Kwbs only on 
+first time creation. Subsequent saves will just update the existing rows. I created a stored function to handle this case.
+5. Project Status - home page data grid shows the current project status. Project/general tab has facility to update the status manually. ajax call
+is used to update the status.
+6. Other minor improvements - Chrome compatibility, total hours working
